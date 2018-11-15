@@ -6,13 +6,13 @@ import PackageDescription
 let package = Package(
     name: "rsocket-swift",
     products: [
-        .library(name: "rsocket-swift", targets: ["rsocket-swift"]),
+        .library(name: "RSocket", targets: ["RSocket"]),
     ],
     dependencies: [
          .package(url: "https://github.com/apple/swift-nio-ssl.git", from: "1.0.0"),
     ],
     targets: [
-        .target(name: "rsocket-swift", dependencies: ["NIOOpenSSL"]),
-        .testTarget(name: "rsocket-swiftTests", dependencies: ["rsocket-swift"]),
+        .target(name: "RSocket", dependencies: ["NIOOpenSSL"]),
+        .testTarget(name: "RSocketTests", dependencies: ["RSocket"]),
     ]
 )
